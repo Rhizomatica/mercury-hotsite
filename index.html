@@ -1,0 +1,2010 @@
+<!-- AUTO-GENERATED — do not edit directly. Edit files in sections/ and run ./build.sh -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>Mercury — The Open-Source HF Modem | Rhizomatica</title>
+  <meta
+    name="description"
+    content="Mercury is the world's first fully open-source Digital Radio OFDM protocol for HF broadcast and peer-to-peer ARQ connections. Built for emergency communications, remote communities, and a free internet. GPL-3.0 | Backed by ARDC."
+  />
+  <meta
+    name="keywords"
+    content="HF modem, open source, ham radio, HERMES, Rhizomatica, ARDC, FreeDV, amateur radio, emergency communications, digital radio, OFDM, ARQ, shortwave"
+  />
+  <meta
+    property="og:title"
+    content="Mercury — The Open-Source HF Modem"
+  />
+  <meta
+    property="og:description"
+    content="Connect the unconnected. The world's first fully open-source HF modem — built for emergencies, remote communities, and a free internet."
+  />
+  <meta
+    property="og:type"
+    content="website"
+  />
+  <meta
+    property="og:url"
+    content="https://mercury.rhizomatica.org"
+  />
+  <meta
+    property="og:site_name"
+    content="Mercury by Rhizomatica"
+  />
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+  <meta
+    name="twitter:title"
+    content="Mercury — The Open-Source HF Modem"
+  />
+  <meta
+    name="twitter:description"
+    content="Connect the unconnected. Open-source, GPL-3.0, backed by ARDC."
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            space: '#020C1B',
+            navy: '#0A1929',
+            'navy-light': '#0D2137',
+            primary: '#ED4E0F',
+            'primary-dark': '#C43D0C',
+            ember: '#ED4E0F',
+            violet: '#7B4FFF',
+            'slate-text': '#CCD6F6',
+            'slate-muted': '#8892B0',
+          },
+        },
+      },
+    };
+  </script>
+
+  <link
+    rel="stylesheet"
+    href="css/styles.css"
+  />
+</head>
+
+<body class="bg-space">
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 bg-space border-b border-[rgba(237,78,15,0.1)]"
+    aria-label="Main navigation"
+  >
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+
+        <!-- Logo -->
+        <a
+          href="#"
+          class="flex items-center gap-3"
+          aria-label="Mercury — Home"
+        >
+          <div class="flex flex-col leading-none">
+            <span class="font-heading font-bold text-[40px] text-white tracking-tight">Mercury</span>
+            <span
+              class="text-[15px] text-primary font-mono tracking-widest uppercase"
+              style="opacity:0.7"
+            >HF Modem</span>
+          </div>
+        </a>
+
+        <!-- Desktop nav links -->
+        <ul
+          class="hidden md:flex items-center gap-8"
+          role="list"
+        >
+          <li><a
+              href="#features"
+              class="text-slate-muted hover:text-primary text-sm font-medium tracking-wide"
+            >Features</a></li>
+          <li><a
+              href="#how-it-works"
+              class="text-slate-muted hover:text-primary text-sm font-medium tracking-wide"
+            >How It Works</a></li>
+          <li><a
+              href="#testimonials"
+              class="text-slate-muted hover:text-primary text-sm font-medium tracking-wide"
+            >Testimonials</a></li>
+          <li><a
+              href="#get-started"
+              class="text-slate-muted hover:text-primary text-sm font-medium tracking-wide"
+            >Get Started</a></li>
+        </ul>
+
+        <!-- Desktop CTAs -->
+        <div class="hidden md:flex items-center gap-4">
+          <a
+            href="https://github.com/Rhizomatica/mercury"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-slate-muted hover:text-white"
+            aria-label="View Mercury on GitHub"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/Rhizomatica/mercury/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-black font-bold text-sm px-5 py-2.5 rounded-lg"
+          >
+            Download
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="hamburger-btn"
+          class="md:hidden text-slate-muted hover:text-white p-2"
+          aria-label="Open menu"
+          onclick="toggleMenu()"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div
+    id="mobile-overlay"
+    class="mobile-overlay fixed inset-0 z-40 bg-black/60 md:hidden"
+    onclick="toggleMenu()"
+  ></div>
+
+  <!-- Mobile drawer -->
+  <div
+    id="mobile-drawer"
+    class="mobile-drawer fixed top-0 right-0 h-full w-72 z-50 bg-navy border-l border-[rgba(237,78,15,0.15)] flex-col pt-20 pb-8 px-8 md:hidden"
+  >
+    <nav class="flex flex-col gap-6">
+      <a
+        href="#features"
+        class="text-slate-text hover:text-primary text-lg font-medium"
+        onclick="toggleMenu()"
+      >Features</a>
+      <a
+        href="#how-it-works"
+        class="text-slate-text hover:text-primary text-lg font-medium"
+        onclick="toggleMenu()"
+      >How It Works</a>
+      <a
+        href="#testimonials"
+        class="text-slate-text hover:text-primary text-lg font-medium"
+        onclick="toggleMenu()"
+      >Testimonials</a>
+      <a
+        href="#get-started"
+        class="text-slate-text hover:text-primary text-lg font-medium"
+        onclick="toggleMenu()"
+      >Get Started</a>
+    </nav>
+    <div class="mt-auto flex flex-col gap-3">
+      <a
+        href="https://github.com/Rhizomatica/mercury"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 border border-[rgba(237,78,15,0.3)] text-slate-text hover:text-primary font-semibold py-3 rounded-lg"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+          />
+        </svg>
+        GitHub
+      </a>
+      <a
+        href="https://github.com/Rhizomatica/mercury/releases"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 bg-primary text-black font-bold py-3 rounded-lg"
+      >
+        Download
+      </a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section
+      id="hero"
+      class="section-padding bg-grid pt-32 md:pt-40 relative grid-bg"
+      aria-label="Hero"
+      style="background-image: url('waves.svg'); background-size: cover; background-position: center center; background-repeat: no-repeat;"
+    >
+      <div class="max-w-5xl mx-auto px-6 text-center">
+
+        <div
+          class="inline-flex items-center gap-2.5 border border-[rgba(237,78,15,0.25)] bg-[rgba(237,78,15,0.05)] rounded-full px-5 py-2 mb-10"
+          role="note"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-primary"
+            aria-hidden="true"
+          ></span>
+          <span class="text-primary text-xs font-semibold tracking-[0.2em] uppercase">HERMES Project — Funded by
+            ARDC</span>
+        </div>
+
+        <h1
+          class="font-heading font-black leading-none tracking-tight mb-8 text-white"
+          style="font-size: clamp(2.6rem, 9vw, 7rem);"
+        >
+          CONNECT THE<br>UNCONNECTED
+        </h1>
+
+        <p
+          class="text-slate-muted max-w-2xl mx-auto mb-12 leading-relaxed"
+          style="font-size: clamp(1rem, 2vw, 1.2rem);"
+        >
+          Mercury is the world's <span class="text-primary font-medium">first fully open-source HF modem</span> — built
+          for emergency communications, remote communities, and a free, uncensorable internet. GPL-3.0. No vendor
+          lock-in. Ever.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://github.com/Rhizomatica/mercury/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 bg-primary hover:bg-primary-dark text-black font-bold px-8 py-4 rounded-xl text-base"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+            Download Free
+          </a>
+          <a
+            href="https://github.com/Rhizomatica/mercury"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 border border-[rgba(237,78,15,0.3)] hover:border-primary text-slate-text hover:text-primary font-semibold px-8 py-4 rounded-xl text-base"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            View Source Code
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ SOCIAL PROOF ═══════════════════════════ -->
+    <section
+      class="bg-navy border-y border-[rgba(237,78,15,0.1)] py-6"
+      aria-label="Key highlights"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <ul
+          class="flex flex-wrap items-center justify-center gap-x-10 gap-y-4"
+          role="list"
+        >
+          <li class="flex items-center gap-2"><span class="text-primary">⭐</span><span
+              class="text-slate-muted text-sm font-medium"
+            >150+ GitHub Stars</span></li>
+          <li class="flex items-center gap-2"><span class="text-primary">🔱</span><span
+              class="text-slate-muted text-sm font-medium"
+            >GPL-3.0 Open Source</span></li>
+          <li class="flex items-center gap-2"><span class="text-primary">📡</span><span
+              class="text-slate-muted text-sm font-medium"
+            >HF Radio Compliant</span></li>
+          <!-- <li class="flex items-center gap-2"><span class="text-primary">🛡</span><span class="text-slate-muted text-sm font-medium">ARDC Funded</span></li> -->
+          <!-- <li class="flex items-center gap-2"><span class="text-primary">🌍</span><span class="text-slate-muted text-sm font-medium">Used in 20+ Countries</span></li> -->
+          <li class="flex items-center gap-2"><span class="text-primary">🪟</span><span
+              class="text-slate-muted text-sm font-medium"
+            >Linux &amp; Windows</span></li>
+          <li class="flex items-center gap-2"><span class="text-primary">🔁</span><span
+              class="text-slate-muted text-sm font-medium"
+            >16+ Releases</span></li>
+          <li class="flex items-center gap-2"><span class="text-primary">🤝</span><span
+              class="text-slate-muted text-sm font-medium"
+            >VARA Compatible</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FEATURES ═══════════════════════════ -->
+    <section
+      id="features"
+      class="section-padding bg-space"
+      aria-labelledby="features-heading"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-14">
+          <span
+            class="inline-block text-primary text-xs font-semibold tracking-[0.25em] uppercase border border-[rgba(237,78,15,0.25)] bg-[rgba(237,78,15,0.05)] rounded-full px-4 py-1.5 mb-5"
+          >
+            Features
+          </span>
+          <h2
+            id="features-heading"
+            class="font-heading font-black text-white mb-5"
+            style="font-size: clamp(2rem, 5vw, 3.5rem);"
+          >
+            Everything You Need, <span class="text-primary">Nothing You Don't</span>
+          </h2>
+          <p class="text-slate-muted max-w-xl mx-auto leading-relaxed">
+            Mercury delivers enterprise-grade HF data communications in a lean, open-source package. Modular. Adaptive.
+            Unstoppable.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          role="list"
+          aria-label="Mercury features"
+        >
+
+          <div
+            class="p-6 rounded-2xl border border-[rgba(237,78,15,0.1)] bg-[rgba(10,25,41,0.6)]"
+            role="listitem"
+          >
+            <div class="mb-4 p-2.5 inline-block rounded-xl bg-[rgba(237,78,15,0.08)]">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                class="w-7 h-7"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8 24h8l4-12 8 24 4-12h8"
+                  stroke="#ED4E0F"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-base mb-2.5">Adaptive ARQ Protocol</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Intelligent error-correction with connect/accept
+              handshake,
+              ACK/retry logic, keepalive, and controlled disconnect. Every byte delivered, even under harsh conditions.
+            </p>
+            <span
+              class="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase border rounded-full px-2.5 py-0.5 mt-4 text-primary border-[rgba(237,78,15,0.3)] bg-[rgba(237,78,15,0.05)]"
+            >Reliability</span>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-[rgba(237,78,15,0.1)] bg-[rgba(10,25,41,0.6)]"
+            role="listitem"
+          >
+            <div class="mb-4 p-2.5 inline-block rounded-xl bg-[rgba(237,78,15,0.08)]">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                class="w-7 h-7"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="7"
+                  stroke="#ED4E0F"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M24 4v5M24 39v5M4 24h5M39 24h5M9.17 9.17l3.53 3.53M35.3 35.3l3.53 3.53M9.17 38.83l3.53-3.53M35.3 12.7l3.53-3.53"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-base mb-2.5">Intelligent Gear-Shifting</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Per-direction adaptive mode selection: automatically
+              shifts
+              between DATAC4, DATAC3, and DATAC1 based on live SNR feedback. Maximum throughput, always.</p>
+            <span
+              class="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase border rounded-full px-2.5 py-0.5 mt-4 text-violet border-[rgba(123,79,255,0.3)] bg-[rgba(123,79,255,0.05)]"
+            >Performance</span>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-[rgba(237,78,15,0.1)] bg-[rgba(10,25,41,0.6)]"
+            role="listitem"
+          >
+            <div class="mb-4 p-2.5 inline-block rounded-xl bg-[rgba(237,78,15,0.08)]">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                class="w-7 h-7"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="4"
+                  fill="#ED4E0F"
+                />
+                <path
+                  d="M14 14a14.14 14.14 0 000 20M34 14a14.14 14.14 0 010 20M8 8a22 22 0 000 32M40 8a22 22 0 010 32"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-base mb-2.5">Broadcast Mode</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Simultaneously send data to many stations in parallel
+              alongside ARQ sessions. Dedicated broadcast framing with its own TCP ingress port — one transmitter, many
+              receivers.</p>
+            <span
+              class="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase border rounded-full px-2.5 py-0.5 mt-4 text-primary border-[rgba(237,78,15,0.3)] bg-[rgba(237,78,15,0.05)]"
+            >Scale</span>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-[rgba(237,78,15,0.1)] bg-[rgba(10,25,41,0.6)]"
+            role="listitem"
+          >
+            <div class="mb-4 p-2.5 inline-block rounded-xl bg-[rgba(237,78,15,0.08)]">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                class="w-7 h-7"
+                aria-hidden="true"
+              >
+                <rect
+                  x="6"
+                  y="14"
+                  width="36"
+                  height="20"
+                  rx="4"
+                  stroke="#ED4E0F"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M16 24h16M16 19h8M16 29h12"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-base mb-2.5">VARA TCP Compatible</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Drop-in replacement for VARA TNC. The same control and
+              data
+              socket interface means Mercury works instantly with Winlink, JS8Call, and all existing ham radio apps.</p>
+            <span
+              class="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase border rounded-full px-2.5 py-0.5 mt-4 text-primary border-[rgba(237,78,15,0.3)] bg-[rgba(237,78,15,0.05)]"
+            >Compatibility</span>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-[rgba(237,78,15,0.1)] bg-[rgba(10,25,41,0.6)]"
+            role="listitem"
+          >
+            <div class="mb-4 p-2.5 inline-block rounded-xl bg-[rgba(237,78,15,0.08)]">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                class="w-7 h-7"
+                aria-hidden="true"
+              >
+                <rect
+                  x="6"
+                  y="10"
+                  width="36"
+                  height="24"
+                  rx="3"
+                  stroke="#ED4E0F"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M14 38h20M19 34v4M29 34v4"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <circle
+                  cx="24"
+                  cy="22"
+                  r="5"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-base mb-2.5">Cross-Platform</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Native binaries for Linux (AMD64 &amp; ARM64 / Raspberry
+              Pi)
+              and Windows. ALSA, PulseAudio, WASAPI audio backends. Works on any hardware with a sound card.</p>
+            <span
+              class="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase border rounded-full px-2.5 py-0.5 mt-4 text-violet border-[rgba(123,79,255,0.3)] bg-[rgba(123,79,255,0.05)]"
+            >Portability</span>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-[rgba(237,78,15,0.1)] bg-[rgba(10,25,41,0.6)]"
+            role="listitem"
+          >
+            <div class="mb-4 p-2.5 inline-block rounded-xl bg-[rgba(237,78,15,0.08)]">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                class="w-7 h-7"
+                aria-hidden="true"
+              >
+                <path
+                  d="M10 34l8-20 6 14 4-8 4 8 6-14"
+                  stroke="#ED4E0F"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6 38h36"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-base mb-2.5">Radio Agnostic via HAMLIB</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Controls thousands of HF transceivers via HAMLIB — Icom,
+              Yaesu, Kenwood, and more. Automatic PTT keying. Works with virtually any amateur or commercial HF radio.
+            </p>
+            <span
+              class="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase border rounded-full px-2.5 py-0.5 mt-4 text-primary border-[rgba(237,78,15,0.3)] bg-[rgba(237,78,15,0.05)]"
+            >Flexibility</span>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-[rgba(237,78,15,0.1)] bg-[rgba(10,25,41,0.6)]"
+            role="listitem"
+          >
+            <div class="mb-4 p-2.5 inline-block rounded-xl bg-[rgba(237,78,15,0.08)]">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                class="w-7 h-7"
+                aria-hidden="true"
+              >
+                <path
+                  d="M24 8v8M24 32v8M8 24h8M32 24h8M12 12l5.66 5.66M30.34 30.34l5.66 5.66M12 36l5.66-5.66M30.34 17.66l5.66-5.66"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="6"
+                  stroke="#ED4E0F"
+                  stroke-width="2.5"
+                />
+              </svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-base mb-2.5">FreeDV Physical Layer</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Built on field-proven FreeDV digital data modes
+              developed by
+              David Rowe (VK5DGR). Mode pool eliminates codec re-initialization — the fastest possible link setup.</p>
+            <span
+              class="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase border rounded-full px-2.5 py-0.5 mt-4 text-primary border-[rgba(237,78,15,0.3)] bg-[rgba(237,78,15,0.05)]"
+            >Proven Tech</span>
+          </div>
+
+          <div
+            class="p-6 rounded-2xl border border-[rgba(237,78,15,0.1)] bg-[rgba(10,25,41,0.6)]"
+            role="listitem"
+          >
+            <div class="mb-4 p-2.5 inline-block rounded-xl bg-[rgba(237,78,15,0.08)]">
+              <svg
+                viewBox="0 0 48 48"
+                fill="none"
+                class="w-7 h-7"
+                aria-hidden="true"
+              >
+                <path
+                  d="M24 6a18 18 0 100 36A18 18 0 0024 6z"
+                  stroke="#ED4E0F"
+                  stroke-width="2.5"
+                />
+                <path
+                  d="M24 6C14 14 14 34 24 42M24 6c10 8 10 28 0 36M6 24h36"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <h3 class="font-heading font-bold text-white text-base mb-2.5">GPL-3.0 Open Source</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Full source code. No license fees. No vendor lock-in.
+              Audit
+              every line, fork it, extend it, deploy it. Community-driven development sponsored by ARDC.</p>
+            <span
+              class="inline-block text-[10px] font-semibold tracking-[0.2em] uppercase border rounded-full px-2.5 py-0.5 mt-4 text-violet border-[rgba(123,79,255,0.3)] bg-[rgba(123,79,255,0.05)]"
+            >Freedom</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ══════════════════════════ HOW IT WORKS ═══════════════════════════ -->
+    <section
+      id="how-it-works"
+      class="section-padding bg-navy"
+      aria-labelledby="how-heading"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+
+        <div class="text-center mb-16">
+          <span
+            class="inline-block text-primary text-xs font-semibold tracking-[0.25em] uppercase border border-[rgba(237,78,15,0.25)] bg-[rgba(237,78,15,0.05)] rounded-full px-4 py-1.5 mb-5"
+          >
+            How It Works
+          </span>
+          <h2
+            id="how-heading"
+            class="font-heading font-black text-white mb-5"
+            style="font-size: clamp(2rem, 5vw, 3.5rem);"
+          >
+            Up and Running in <span class="text-primary">Three Steps</span>
+          </h2>
+          <p class="text-slate-muted max-w-xl mx-auto leading-relaxed">
+            Mercury is designed for simplicity without sacrificing power. From zero to HF data link in minutes.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14"
+          role="list"
+          aria-label="Setup steps"
+        >
+
+          <div
+            class="flex flex-col items-center text-center"
+            role="listitem"
+          >
+            <div
+              class="w-20 h-20 rounded-full border-2 border-[rgba(237,78,15,0.4)] bg-navy flex items-center justify-center mb-6"
+            >
+              <svg
+                viewBox="0 0 64 64"
+                fill="none"
+                class="w-12 h-12"
+                aria-hidden="true"
+              >
+                <rect
+                  x="8"
+                  y="20"
+                  width="48"
+                  height="32"
+                  rx="4"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                />
+                <rect
+                  x="14"
+                  y="26"
+                  width="14"
+                  height="9"
+                  rx="1"
+                  stroke="#ED4E0F"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="36"
+                  cy="35"
+                  r="5"
+                  stroke="#ED4E0F"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="48"
+                  cy="35"
+                  r="3"
+                  stroke="#ED4E0F"
+                  stroke-width="1.5"
+                />
+                <line
+                  x1="32"
+                  y1="12"
+                  x2="32"
+                  y2="20"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M24 12h16"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="p-7 rounded-2xl border border-[rgba(237,78,15,0.12)] bg-[rgba(10,25,41,0.5)] w-full">
+              <span class="font-mono text-[rgba(237,78,15,0.4)] text-xs font-bold tracking-widest mb-3 block">STEP
+                01</span>
+              <h3 class="font-heading font-bold text-white text-xl mb-3">Connect Your HF Radio</h3>
+              <p class="text-slate-muted text-sm leading-relaxed mb-5">Plug your HF transceiver into your computer via a
+                sound card interface (SignaLink, Rigblaster, or built-in). Mercury supports any radio HAMLIB knows about
+                — thousands of models from Icom, Yaesu, Kenwood, and more.</p>
+              <div
+                class="inline-flex items-center gap-2 text-xs text-primary font-mono bg-[rgba(237,78,15,0.05)] border border-[rgba(237,78,15,0.15)] rounded-full px-3 py-1"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-primary"
+                  aria-hidden="true"
+                ></span>
+                USB-C / Serial / Audio Interface
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center text-center"
+            role="listitem"
+          >
+            <div
+              class="w-20 h-20 rounded-full border-2 border-[rgba(237,78,15,0.4)] bg-navy flex items-center justify-center mb-6"
+            >
+              <svg
+                viewBox="0 0 64 64"
+                fill="none"
+                class="w-12 h-12"
+                aria-hidden="true"
+              >
+                <rect
+                  x="8"
+                  y="8"
+                  width="48"
+                  height="36"
+                  rx="4"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                />
+                <path
+                  d="M16 20h8M16 28h16M16 36h10"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <circle
+                  cx="44"
+                  cy="28"
+                  r="8"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                />
+                <path
+                  d="M40 28h8M44 24v8"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M20 52h24M32 44v8"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+            <div class="p-7 rounded-2xl border border-[rgba(237,78,15,0.12)] bg-[rgba(10,25,41,0.5)] w-full">
+              <span class="font-mono text-[rgba(237,78,15,0.4)] text-xs font-bold tracking-widest mb-3 block">STEP
+                02</span>
+              <h3 class="font-heading font-bold text-white text-xl mb-3">Install &amp; Configure Mercury</h3>
+              <p class="text-slate-muted text-sm leading-relaxed mb-5">Install Mercury via Debian package, compile from
+                source, or download the Windows ZIP. Edit a simple INI config file to set your callsign, audio devices,
+                and radio model. That's it.</p>
+              <div
+                class="inline-flex items-center gap-2 text-xs text-primary font-mono bg-[rgba(237,78,15,0.05)] border border-[rgba(237,78,15,0.15)] rounded-full px-3 py-1"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-primary"
+                  aria-hidden="true"
+                ></span>
+                Linux, Windows, Raspberry Pi
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col items-center text-center"
+            role="listitem"
+          >
+            <div
+              class="w-20 h-20 rounded-full border-2 border-[rgba(237,78,15,0.4)] bg-navy flex items-center justify-center mb-6"
+            >
+              <svg
+                viewBox="0 0 64 64"
+                fill="none"
+                class="w-12 h-12"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8 32a24 24 0 0048 0"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M20 20a17 17 0 0124 0"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-opacity="0.6"
+                />
+                <path
+                  d="M27 11a9 9 0 0110 0"
+                  stroke="#ED4E0F"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-opacity="0.3"
+                />
+                <circle
+                  cx="32"
+                  cy="32"
+                  r="5"
+                  fill="#ED4E0F"
+                />
+              </svg>
+            </div>
+            <div class="p-7 rounded-2xl border border-[rgba(237,78,15,0.12)] bg-[rgba(10,25,41,0.5)] w-full">
+              <span class="font-mono text-[rgba(237,78,15,0.4)] text-xs font-bold tracking-widest mb-3 block">STEP
+                03</span>
+              <h3 class="font-heading font-bold text-white text-xl mb-3">Start Communicating</h3>
+              <p class="text-slate-muted text-sm leading-relaxed mb-5">Mercury exposes a VARA-compatible TCP interface.
+                Connect Winlink Express, JS8Call, or any ARQ-capable app. Or use Mercury directly to send files, email,
+                and data thousands of kilometers.</p>
+              <div
+                class="inline-flex items-center gap-2 text-xs text-primary font-mono bg-[rgba(237,78,15,0.05)] border border-[rgba(237,78,15,0.15)] rounded-full px-3 py-1"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-primary"
+                  aria-hidden="true"
+                ></span>
+                Winlink, JS8Call, Custom Apps
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center">
+          <p class="text-slate-muted mb-6 text-sm">Ready to connect? Follow our detailed installation guide.</p>
+          <a
+            href="#get-started"
+            class="inline-flex items-center gap-2 border border-[rgba(237,78,15,0.3)] hover:border-primary text-primary hover:text-white font-semibold px-7 py-3 rounded-xl text-sm"
+          >
+            View Installation Guide
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ TESTIMONIALS ═══════════════════════════ -->
+    <section
+      id="testimonials"
+      class="section-padding bg-space"
+      aria-labelledby="testimonials-heading"
+    >
+      <div class="max-w-5xl mx-auto px-6">
+
+        <div class="text-center mb-14">
+          <span
+            class="inline-block text-primary text-xs font-semibold tracking-[0.25em] uppercase border border-[rgba(237,78,15,0.25)] bg-[rgba(237,78,15,0.05)] rounded-full px-4 py-1.5 mb-5"
+          >
+            Testimonials
+          </span>
+          <h2
+            id="testimonials-heading"
+            class="font-heading font-black text-white"
+            style="font-size: clamp(2rem, 5vw, 3.5rem);"
+          >
+            Trusted by <span class="text-primary">World-Class Experts</span>
+          </h2>
+        </div>
+
+        <!-- Testimonial 0 (ARDC) -->
+        <div
+          id="testimonial-0"
+          class="testimonial-panel active rounded-3xl border border-[rgba(237,78,15,0.2)] bg-[rgba(237,78,15,0.05)] p-10 md:p-14 mb-8"
+        >
+          <blockquote>
+            <p class="text-slate-text text-lg md:text-xl leading-relaxed mb-10 italic">
+              "Not only has Rhizomatica developed a fully open-source software modem, they have done so to empower
+              communities in need of their own communication infrastructure. We are proud to have supported Rhizomatica
+              in this work, and very excited to see it now available to the amateur community and others around the
+              world using HF for critical communication."
+            </p>
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full bg-[rgba(237,78,15,0.15)] border border-[rgba(237,78,15,0.2)] flex items-center justify-center font-heading font-bold text-primary text-sm"
+              aria-hidden="true"
+            >RS</div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-heading font-bold text-white text-base">Rosy Schechter</span>
+                <span
+                  class="font-mono text-xs text-primary border border-[rgba(237,78,15,0.2)] rounded px-2 py-0.5">KJ7RYV</span>
+              </div>
+              <div class="text-slate-muted text-sm">Executive Director, ARDC</div>
+              <div
+                class="text-slate-muted text-xs"
+                style="opacity:0.6"
+              >Amateur Radio Digital Communications</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 1 (FreeDV) -->
+        <div
+          id="testimonial-1"
+          class="testimonial-panel rounded-3xl border border-[rgba(123,79,255,0.2)] bg-[rgba(123,79,255,0.05)] p-10 md:p-14 mb-8"
+        >
+          <blockquote>
+            <p class="text-slate-text text-lg md:text-xl leading-relaxed mb-10 italic">
+              "I am very pleased to see Rhizomatica using the FreeDV data modes combined with their own custom ARQ
+              protocol to send data over low SNR HF channels. It is great to see Rhizomatica embracing those waveforms,
+              and spreading the use of open source in HF Data."
+            </p>
+          </blockquote>
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full bg-[rgba(123,79,255,0.15)] border border-[rgba(123,79,255,0.2)] flex items-center justify-center font-heading font-bold text-violet text-sm"
+              aria-hidden="true"
+            >DR</div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-heading font-bold text-white text-base">David Rowe</span>
+                <span
+                  class="font-mono text-xs text-violet border border-[rgba(123,79,255,0.2)] rounded px-2 py-0.5">VK5DGR</span>
+              </div>
+              <div class="text-slate-muted text-sm">Inventor of Codec 2 &amp; FreeDV</div>
+              <div
+                class="text-slate-muted text-xs"
+                style="opacity:0.6"
+              >Open-Source Digital Radio Pioneer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div
+          class="flex items-center justify-center gap-3 mb-6"
+          role="tablist"
+          aria-label="Testimonials navigation"
+        >
+          <button
+            onclick="showTestimonial(0)"
+            id="dot-0"
+            class="w-8 h-2.5 bg-primary rounded-full"
+            role="tab"
+            aria-selected="true"
+            aria-label="View testimonial from Rosy Schechter"
+          ></button>
+          <button
+            onclick="showTestimonial(1)"
+            id="dot-1"
+            class="w-2.5 h-2.5 bg-slate-muted rounded-full"
+            style="opacity:0.3"
+            role="tab"
+            aria-selected="false"
+            aria-label="View testimonial from David Rowe"
+          ></button>
+        </div>
+        <div class="flex items-center justify-center gap-8">
+          <button
+            onclick="showTestimonial(0)"
+            id="name-0"
+            class="text-sm font-medium text-primary"
+          >Rosy Schechter</button>
+          <button
+            onclick="showTestimonial(1)"
+            id="name-1"
+            class="text-sm font-medium text-slate-muted hover:text-slate-text"
+          >David Rowe</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ OPEN SOURCE ════════════════════════════ -->
+    <section
+      id="open-source"
+      class="section-padding bg-navy grid-bg"
+      aria-labelledby="os-heading"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+
+        <div class="text-center mb-14">
+          <span
+            class="inline-block text-violet text-xs font-semibold tracking-[0.25em] uppercase border border-[rgba(123,79,255,0.25)] bg-[rgba(123,79,255,0.05)] rounded-full px-4 py-1.5 mb-5"
+          >
+            Open Source
+          </span>
+          <h2
+            id="os-heading"
+            class="font-heading font-black text-white mb-5"
+            style="font-size: clamp(2rem, 5vw, 3.5rem);"
+          >
+            Built for Humanity, <span class="text-violet">Not for Profit</span>
+          </h2>
+          <p class="text-slate-muted max-w-2xl mx-auto leading-relaxed">
+            Rhizomatica is a non-profit. Mercury is a public good. Communication is a human right — and that means the
+            tools must be open, free, and impossible to monopolize.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12"
+          role="list"
+        >
+          <div
+            class="p-6 rounded-2xl border border-[rgba(123,79,255,0.15)] bg-[rgba(123,79,255,0.04)]"
+            role="listitem"
+          >
+            <div
+              class="text-3xl mb-4"
+              aria-hidden="true"
+            >🔓</div>
+            <h3 class="font-heading font-bold text-white text-base mb-2">No Vendor Lock-In</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">GPL-3.0 means you own your communication stack. Deploy
+              it, modify it, share it. No subscription. No API key. No kill switch.</p>
+          </div>
+          <div
+            class="p-6 rounded-2xl border border-[rgba(123,79,255,0.15)] bg-[rgba(123,79,255,0.04)]"
+            role="listitem"
+          >
+            <div
+              class="text-3xl mb-4"
+              aria-hidden="true"
+            >🔍</div>
+            <h3 class="font-heading font-bold text-white text-base mb-2">Full Auditability</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Every line of code is public. Security researchers,
+              governments, and communities can verify exactly what Mercury does — no backdoors possible.</p>
+          </div>
+          <div
+            class="p-6 rounded-2xl border border-[rgba(123,79,255,0.15)] bg-[rgba(123,79,255,0.04)]"
+            role="listitem"
+          >
+            <div
+              class="text-3xl mb-4"
+              aria-hidden="true"
+            >🌱</div>
+            <h3 class="font-heading font-bold text-white text-base mb-2">Community Driven</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Built by Rhizomatica with contributions from radio
+              enthusiasts, researchers, and humanitarian workers worldwide. You can contribute too.</p>
+          </div>
+          <div
+            class="p-6 rounded-2xl border border-[rgba(123,79,255,0.15)] bg-[rgba(123,79,255,0.04)]"
+            role="listitem"
+          >
+            <div
+              class="text-3xl mb-4"
+              aria-hidden="true"
+            >♾️</div>
+            <h3 class="font-heading font-bold text-white text-base mb-2">Built for Longevity</h3>
+            <p class="text-slate-muted text-sm leading-relaxed">Open standards (FreeDV, HAMLIB) ensure Mercury works
+              today and tomorrow. No dependency on a company that might shut down.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <div class="p-8 rounded-2xl border border-[rgba(237,78,15,0.2)] bg-[rgba(237,78,15,0.03)]">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-[rgba(237,78,15,0.1)] flex items-center justify-center">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"
+                    fill="#ED4E0F"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-white text-base">GPL-3.0 License</div>
+                <div class="text-slate-muted text-xs">Strong copyleft protection</div>
+              </div>
+            </div>
+            <p class="text-slate-muted text-sm leading-relaxed mb-5">Mercury is licensed under the GNU General Public
+              License v3.0. This guarantees your freedom to study, share, and modify the software — and ensures those
+              freedoms are preserved for everyone.</p>
+            <a
+              href="https://github.com/Rhizomatica/mercury/blob/mercuryv2/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-primary text-sm font-medium hover:underline"
+            >
+              Read the license
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="p-8 rounded-2xl border border-[rgba(123,79,255,0.2)] bg-[rgba(123,79,255,0.03)]">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-[rgba(123,79,255,0.1)] flex items-center justify-center">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="w-5 h-5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"
+                    stroke="#7B4FFF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-white text-base">ARDC Funded</div>
+                <div class="text-slate-muted text-xs">Amateur Radio Digital Communications</div>
+              </div>
+            </div>
+            <p class="text-slate-muted text-sm leading-relaxed mb-5">Mercury development is sponsored by ARDC — an
+              organization dedicated to supporting open, digital amateur radio. Join our community mailing list to
+              contribute, report issues, and shape the future of HF communications.</p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="https://lists.riseup.net/www/info/hermes-general"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-violet text-sm font-medium hover:underline"
+              >
+                Join mailing list
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/Rhizomatica/mercury"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-violet text-sm font-medium hover:underline"
+              >
+                View on GitHub
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════ GET STARTED ════════════════════════════ -->
+    <section
+      id="get-started"
+      class="section-padding bg-space"
+      aria-labelledby="gs-heading"
+    >
+      <div class="max-w-5xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+          <span
+            class="inline-block text-primary text-xs font-semibold tracking-[0.25em] uppercase border border-[rgba(237,78,15,0.25)] bg-[rgba(237,78,15,0.05)] rounded-full px-4 py-1.5 mb-5"
+          >
+            Get Started
+          </span>
+          <h2
+            id="gs-heading"
+            class="font-heading font-black text-white mb-5"
+            style="font-size: clamp(2rem, 5vw, 3.5rem);"
+          >
+            Install Mercury in <span class="text-primary">Minutes</span>
+          </h2>
+          <p class="text-slate-muted max-w-xl mx-auto leading-relaxed">
+            Choose your platform and follow the steps. Full documentation available at
+            <a
+              href="https://rhizomatica.github.io/mercury/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline"
+            >rhizomatica.github.io/mercury</a>.
+          </p>
+        </div>
+
+        <!-- Tab bar -->
+        <div
+          class="flex flex-wrap gap-2 justify-center mb-8"
+          role="tablist"
+          aria-label="Platform selection"
+        >
+          <button
+            onclick="switchTab('linux')"
+            id="tab-linux"
+            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold bg-primary text-black"
+            role="tab"
+            aria-selected="true"
+          >🐧 Linux (Make)</button>
+          <button
+            onclick="switchTab('debian')"
+            id="tab-debian"
+            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-[rgba(237,78,15,0.2)] text-slate-muted hover:text-primary"
+            role="tab"
+            aria-selected="false"
+          >📦 Debian Package</button>
+          <button
+            onclick="switchTab('windows')"
+            id="tab-windows"
+            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-[rgba(237,78,15,0.2)] text-slate-muted hover:text-primary"
+            role="tab"
+            aria-selected="false"
+          >🪟 Windows</button>
+          <button
+            onclick="switchTab('source')"
+            id="tab-source"
+            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-[rgba(237,78,15,0.2)] text-slate-muted hover:text-primary"
+            role="tab"
+            aria-selected="false"
+          >⚙️ From Source</button>
+        </div>
+
+        <!-- Linux tab -->
+        <div
+          id="panel-linux"
+          class="tab-panel active space-y-4"
+        >
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >1</span>
+              <span class="text-slate-text text-sm font-semibold">Install Dependencies</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">sudo apt-get update
+                  &amp;&amp; sudo apt-get install \</span></div>
+              <div><span
+                  class="text-slate-text"
+                  style="opacity:0.8"
+                > libasound2-dev libpulse-dev libhamlib-dev make git</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >2</span>
+              <span class="text-slate-text text-sm font-semibold">Clone &amp; Build</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">git clone
+                  https://github.com/Rhizomatica/mercury.git</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">cd mercury &amp;&amp;
+                  make</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">sudo make
+                  install</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >3</span>
+              <span class="text-slate-text text-sm font-semibold">Configure &amp; Run</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">cp mercury.ini.example
+                  mercury.ini</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Edit mercury.ini with your callsign and audio devices</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">mercury -z # List
+                  available sound cards</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">mercury -l # List
+                  available modem modes</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">mercury # Start
+                  Mercury</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Debian tab -->
+        <div
+          id="panel-debian"
+          class="tab-panel space-y-4"
+        >
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >1</span>
+              <span class="text-slate-text text-sm font-semibold">Add Repository Key</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">wget
+                  --no-check-certificate -qO- \</span></div>
+              <div><span
+                  class="text-slate-text"
+                  style="opacity:0.8"
+                > https://debian.hermes.radio/hermes/hermes.key | \</span></div>
+              <div><span
+                  class="text-slate-text"
+                  style="opacity:0.8"
+                > gpg --dearmor -o - | \</span></div>
+              <div><span
+                  class="text-slate-text"
+                  style="opacity:0.8"
+                > sudo tee /etc/apt/trusted.gpg.d/hermes.gpg &gt; /dev/null</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >2</span>
+              <span class="text-slate-text text-sm font-semibold">Add Source (AMD64)</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">echo 'deb [arch=amd64]
+                  http://debian.hermes.radio/hermes trixie main' | \</span></div>
+              <div><span
+                  class="text-slate-text"
+                  style="opacity:0.8"
+                > sudo tee /etc/apt/sources.list.d/hermes.list</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># For ARM64 (Raspberry Pi), replace amd64 with arm64</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >3</span>
+              <span class="text-slate-text text-sm font-semibold">Install Mercury</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">sudo apt-get
+                  update</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">sudo apt-get install
+                  mercury</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">mercury --version #
+                  Verify installation</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Windows tab -->
+        <div
+          id="panel-windows"
+          class="tab-panel space-y-4"
+        >
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >1</span>
+              <span class="text-slate-text text-sm font-semibold">Download the ZIP</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># 1. Visit the releases page:</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># https://github.com/Rhizomatica/mercury/releases</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># 2. Download the latest Windows ZIP package</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># 3. Extract to your preferred directory</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >2</span>
+              <span class="text-slate-text text-sm font-semibold">Configure &amp; Run</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Copy and edit the configuration file:</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">copy
+                  mercury.ini.example mercury.ini</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Edit mercury.ini with Notepad or VS Code</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Double-click mercury.exe to launch</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >3</span>
+              <span class="text-slate-text text-sm font-semibold">Connect Your App</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Mercury exposes a VARA-compatible TCP TNC:</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># ARQ Control: localhost:8300</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># ARQ Data: localhost:8301</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Broadcast: localhost:8100</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Configure Winlink, JS8Call, or your app to connect here</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Source tab -->
+        <div
+          id="panel-source"
+          class="tab-panel space-y-4"
+        >
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >1</span>
+              <span class="text-slate-text text-sm font-semibold">Prerequisites</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Required: GCC, Make, ALSA/PulseAudio dev libs, HAMLIB dev libs</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">sudo apt-get install
+                  build-essential libasound2-dev \</span></div>
+              <div><span
+                  class="text-slate-text"
+                  style="opacity:0.8"
+                > libpulse-dev libhamlib-dev</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >2</span>
+              <span class="text-slate-text text-sm font-semibold">Clone Repository</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">git clone
+                  https://github.com/Rhizomatica/mercury.git</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">cd mercury</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Check config.mk for compiler options</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">cat config.mk</span>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >3</span>
+              <span class="text-slate-text text-sm font-semibold">Build &amp; Install</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">make -j$(nproc) # Build
+                  with all CPU cores</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">sudo make install #
+                  Install system-wide</span></div>
+              <div><span class="text-primary select-none">$ </span><span class="text-slate-text">mercury -h # View all
+                  options</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom links -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+          <a
+            href="https://rhizomatica.github.io/mercury/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 border border-[rgba(237,78,15,0.3)] hover:border-primary text-primary font-semibold px-7 py-3.5 rounded-xl text-sm"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+              />
+            </svg>
+            Full Documentation
+          </a>
+          <a
+            href="https://github.com/Rhizomatica/mercury/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-black font-bold px-7 py-3.5 rounded-xl text-sm"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+            Download Latest Release
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer
+    class="bg-[#010912] border-t border-[rgba(237,78,15,0.08)]"
+    aria-label="Site footer"
+  >
+    <div class="max-w-7xl mx-auto px-6 py-16">
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 mb-14">
+
+        <!-- Brand -->
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-9 h-9 rounded-lg bg-[rgba(237,78,15,0.1)] flex items-center justify-center">
+              <svg
+                viewBox="0 0 36 36"
+                fill="none"
+                class="w-6 h-6"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="18"
+                  cy="18"
+                  r="3"
+                  fill="#ED4E0F"
+                />
+                <circle
+                  cx="18"
+                  cy="18"
+                  r="7"
+                  stroke="#ED4E0F"
+                  stroke-width="1.5"
+                  stroke-dasharray="3 3"
+                  opacity="0.7"
+                />
+                <circle
+                  cx="18"
+                  cy="18"
+                  r="13"
+                  stroke="#ED4E0F"
+                  stroke-width="1"
+                  opacity="0.3"
+                />
+              </svg>
+            </div>
+            <div>
+              <span class="font-heading font-bold text-xl text-white tracking-tight">Mercury</span>
+              <span
+                class="block text-[10px] text-primary font-mono tracking-widest uppercase"
+                style="opacity:0.6"
+              >HF Modem</span>
+            </div>
+          </div>
+          <p class="text-slate-muted text-sm leading-relaxed mb-6 max-w-sm">
+            The world's first fully open-source Digital Radio OFDM protocol for HF broadcast and peer-to-peer ARQ
+            connections. Built for communities that need communication most.
+          </p>
+          <div class="flex items-center gap-4">
+            <a
+              href="https://github.com/Rhizomatica/mercury"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-muted hover:text-primary"
+              aria-label="Mercury on GitHub"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://twitter.com/rhizomatica"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-muted hover:text-primary"
+              aria-label="Rhizomatica on Twitter/X"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/company/rhizomatica"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-slate-muted hover:text-primary"
+              aria-label="Rhizomatica on LinkedIn"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <div>
+            <h3 class="font-heading font-bold text-white text-sm mb-4 tracking-wide">Project</h3>
+            <ul
+              class="space-y-3"
+              role="list"
+            >
+              <li><a
+                  href="https://github.com/Rhizomatica/mercury"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >GitHub Repository</a></li>
+              <li><a
+                  href="https://github.com/Rhizomatica/mercury/releases"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >Releases</a></li>
+              <li><a
+                  href="https://rhizomatica.github.io/mercury/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >Documentation</a></li>
+              <li><a
+                  href="https://github.com/Rhizomatica/mercury-qt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >GUI (mercury-qt)</a></li>
+              <li><a
+                  href="https://rhizomatica.github.io/mercury/app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >Web Interface</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-white text-sm mb-4 tracking-wide">Community</h3>
+            <ul
+              class="space-y-3"
+              role="list"
+            >
+              <li><a
+                  href="https://lists.riseup.net/www/info/hermes-general"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >Mailing List</a></li>
+              <li><a
+                  href="https://hermes.radio/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >HERMES Project</a></li>
+              <li><a
+                  href="https://www.rhizomatica.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >Rhizomatica</a></li>
+              <li><a
+                  href="https://www.ardc.net/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >ARDC</a></li>
+              <li><a
+                  href="https://www.youtube.com/@rhizomatica_communications/playlists"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >YouTube Demos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-heading font-bold text-white text-sm mb-4 tracking-wide">Legal &amp; Code</h3>
+            <ul
+              class="space-y-3"
+              role="list"
+            >
+              <li><a
+                  href="https://github.com/Rhizomatica/mercury/blob/mercuryv2/LICENSE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >GPL-3.0 License</a></li>
+              <li><a
+                  href="https://github.com/Rhizomatica/mercury/blob/mercuryv2/LICENSE-freedv"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >LGPL-2.1 (FreeDV)</a></li>
+              <li><a
+                  href="https://github.com/Rhizomatica/mercury/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >Issues &amp; Bugs</a></li>
+              <li><a
+                  href="https://github.com/Rhizomatica/mercury/pulls"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-slate-muted hover:text-primary text-sm"
+                >Pull Requests</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-[rgba(237,78,15,0.08)] pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <p class="text-slate-muted text-xs text-center md:text-left">
+            &copy; <span id="year"></span>
+            <a
+              href="https://www.rhizomatica.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-primary"
+            >Rhizomatica Communications</a>.
+            Mercury is <a
+              href="https://github.com/Rhizomatica/mercury/blob/mercuryv2/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:underline"
+            >GPL-3.0 licensed</a>.
+          </p>
+          <div
+            class="flex items-center gap-2 text-xs text-slate-muted font-mono"
+            style="opacity:0.6"
+          >
+            <span
+              class="w-1.5 h-1.5 rounded-full bg-primary"
+              aria-hidden="true"
+            ></span>
+            HF Signal Active — Part of the HERMES Project
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
