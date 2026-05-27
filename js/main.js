@@ -1,6 +1,22 @@
 // Current year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Live GitHub star count
+(function () {
+  var el = document.getElementById('gh-stars');
+  if (!el) return;
+  fetch('https://api.github.com/repos/Rhizomatica/mercury')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (typeof data.stargazers_count === 'number') {
+        // Preserve trailing label text after the number (e.g. " GitHub Stars")
+        var label = el.textContent.replace(/^[\d,+\s]+/, '');
+        el.textContent = data.stargazers_count.toLocaleString() + ' ' + label.trim();
+      }
+    })
+    .catch(function () { /* keep fallback text */ });
+}());
+
 // Mobile menu
 function toggleMenu() {
   var drawer = document.getElementById('mobile-drawer');
