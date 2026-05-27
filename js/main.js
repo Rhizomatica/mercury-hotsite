@@ -64,11 +64,11 @@ function switchTab(id) {
   tabs.forEach(function (t) {
     document.getElementById('panel-' + t).classList.remove('active');
     var btn = document.getElementById('tab-' + t);
-    btn.classList.remove('bg-primary', 'text-black');
-    btn.classList.add('border', 'border-[rgba(237,78,15,0.2)]', 'text-slate-muted');
+    btn.classList.remove('bg-primary', 'text-black', 'hover:bg-primary-dark');
+    btn.classList.add('border', 'border-[rgba(237,78,15,0.2)]', 'text-slate-muted', 'hover:text-primary', 'hover:bg-[rgba(237,78,15,0.1)]', 'hover:border-[rgba(237,78,15,0.4)]');
   });
   document.getElementById('panel-' + id).classList.add('active');
   var activeBtn = document.getElementById('tab-' + id);
-  activeBtn.classList.add('bg-primary', 'text-black');
-  activeBtn.classList.remove('border', 'border-[rgba(237,78,15,0.2)]', 'text-slate-muted');
+  activeBtn.classList.add('bg-primary', 'text-black', 'hover:bg-primary-dark');
+  activeBtn.classList.remove('border', 'border-[rgba(237,78,15,0.2)]', 'text-slate-muted', 'hover:text-primary', 'hover:bg-[rgba(237,78,15,0.1)]', 'hover:border-[rgba(237,78,15,0.4)]');
 }
