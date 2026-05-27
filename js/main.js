@@ -18,11 +18,11 @@ function toggleMenu() {
 // Testimonial switcher
 function showTestimonial(idx) {
   var panels = document.querySelectorAll('.testimonial-panel');
-  panels.forEach(function(p) { p.classList.remove('active'); });
+  panels.forEach(function (p) { p.classList.remove('active'); });
   document.getElementById('testimonial-' + idx).classList.add('active');
 
   // Update dots and names
-  for (var i = 0; i < 2; i++) {
+  for (var i = 0; i <= 2; i++) {
     var dot = document.getElementById('dot-' + i);
     var name = document.getElementById('name-' + i);
     if (i === idx) {
@@ -31,7 +31,8 @@ function showTestimonial(idx) {
       dot.style.backgroundColor = '#ED4E0F';
       dot.style.opacity = '1';
       name.style.color = '#ED4E0F';
-    } else {
+    }
+    else {
       dot.style.width = '0.625rem';
       dot.style.height = '0.625rem';
       dot.style.backgroundColor = '#8892B0';
@@ -44,7 +45,7 @@ function showTestimonial(idx) {
 // Get Started platform tabs
 var tabs = ['linux', 'debian', 'windows', 'source'];
 function switchTab(id) {
-  tabs.forEach(function(t) {
+  tabs.forEach(function (t) {
     document.getElementById('panel-' + t).classList.remove('active');
     var btn = document.getElementById('tab-' + t);
     btn.classList.remove('bg-primary', 'text-black');
