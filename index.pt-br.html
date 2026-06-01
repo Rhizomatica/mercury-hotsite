@@ -50,28 +50,14 @@
     content="Conecte quem não está conectado. Open-source, GPL-3.0, apoiado pela ARDC."
   />
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            heading: ['Space Grotesk', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
+            heading: ['Rubik', 'sans-serif'],
+            body: ['Rubik', 'sans-serif'],
           },
           colors: {
             space: '#020C1B',
@@ -106,19 +92,51 @@
       <div class="flex items-center justify-between h-16 md:h-20">
 
         <!-- Logo -->
-        <a
-          href="#"
-          class="flex items-center gap-3"
-          aria-label="Mercury — Início"
-        >
-          <div class="flex flex-col leading-none">
+        <div class="flex items-center gap-3">
+          <a
+            href="https://www.rhizomatica.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Site da Rhizomatica"
+          >
+            <img
+              src="images/logo.png"
+              alt="Rhizomatica"
+              width="76"
+              height="56"
+              class="h-12  w-auto flex-shrink-0"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="https://hermes.radio/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Site do Projeto HERMES"
+          >
+            <img
+              src="images/logo-hermes-500.png"
+              alt="Projeto HERMES"
+              width="76"
+              height="56"
+              class="h-12  w-auto flex-shrink-0 invert"
+              loading="eager"
+              decoding="async"
+            />
+          </a>
+          <a
+            href="#"
+            class="flex flex-col leading-none"
+            aria-label="Mercury — Início"
+          >
             <span class="font-heading font-bold text-[40px] text-white tracking-tight">Mercury</span>
             <span
               class="text-[15px] text-primary font-mono tracking-widest uppercase"
               style="opacity:0.7"
             >Modem HF</span>
-          </div>
-        </a>
+          </a>
+        </div>
 
         <!-- Desktop nav links -->
         <ul
@@ -303,7 +321,7 @@
       id="hero"
       class="section-padding bg-grid pt-32 md:pt-40 relative grid-bg"
       aria-label="Herói"
-      style="background-image: url('waves.svg'); background-size: cover; background-position: center center; background-repeat: no-repeat;"
+      style="background-image: url('/images/waves.svg'); background-size: cover; background-position: center center; background-repeat: no-repeat;"
     >
       <div class="max-w-5xl mx-auto px-6 text-center">
 
@@ -1746,6 +1764,38 @@
         <!-- Brand -->
         <div class="lg:col-span-2">
           <div class="flex items-center gap-3 mb-5">
+            <a
+              href="https://www.rhizomatica.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Site da Rhizomatica"
+            >
+              <img
+                src="images/logo.png"
+                alt="Rhizomatica"
+                width="44"
+                height="44"
+                class="h-11 w-auto flex-shrink-0"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <a
+              href="https://hermes.radio/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Site do Projeto HERMES"
+            >
+              <img
+                src="images/logo-hermes-500.png"
+                alt="Projeto HERMES"
+                width="62"
+                height="44"
+                class="h-11 w-auto flex-shrink-0 invert"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
             <div>
               <span class="font-heading font-bold text-xl text-white tracking-tight">Mercury</span>
               <span
