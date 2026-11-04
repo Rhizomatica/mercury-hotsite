@@ -59,7 +59,7 @@ function showTestimonial(idx) {
 }
 
 // Get Started platform tabs
-var tabs = ['linux', 'debian', 'windows', 'source'];
+var tabs = ['linux', 'debian', 'windows', 'windows-installer', 'source'];
 function switchTab(id) {
   tabs.forEach(function (t) {
     document.getElementById('panel-' + t).classList.remove('active');

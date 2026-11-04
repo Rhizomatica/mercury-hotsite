@@ -1560,7 +1560,14 @@
             class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-[rgba(237,78,15,0.2)] text-slate-muted hover:text-primary hover:bg-[rgba(237,78,15,0.1)] hover:border-[rgba(237,78,15,0.4)]"
             role="tab"
             aria-selected="false"
-          >🪟 Windows</button>
+          >🪟 Windows (ZIP)</button>
+          <button
+            onclick="switchTab('windows-installer')"
+            id="tab-windows-installer"
+            class="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border border-[rgba(237,78,15,0.2)] text-slate-muted hover:text-primary hover:bg-[rgba(237,78,15,0.1)] hover:border-[rgba(237,78,15,0.4)]"
+            role="tab"
+            aria-selected="false"
+          >💿 Windows (Instalador)</button>
           <button
             onclick="switchTab('source')"
             id="tab-source"
@@ -1710,8 +1717,7 @@
           </div>
         </div>
 
-        <!-- Windows tab -->
-        <div
+        <!-- Windows tab (ZIP) -->        <div
           id="panel-windows"
           class="tab-panel space-y-4"
         >
@@ -1803,6 +1809,108 @@
           </div>
         </div>
 
+        <!-- Windows tab (Installer) -->
+        <div
+          id="panel-windows-installer"
+          class="tab-panel space-y-4"
+        >
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >1</span>
+              <span class="text-slate-text text-sm font-semibold">Baixar o Instalador</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># 1. Visite a página de versões:</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># https://github.com/Rhizomatica/mercury/releases</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># 2. Baixe o Mercury_X.Y.Z_Setup.exe mais recente</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >2</span>
+              <span class="text-slate-text text-sm font-semibold">Executar o Instalador</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Clique duas vezes em Mercury_X.Y.Z_Setup.exe</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Siga o assistente para concluir a instalação</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >3</span>
+              <span class="text-slate-text text-sm font-semibold">Configurar e Executar</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Edite mercury.ini com seu editor de texto preferido</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Inicie o Mercury ao final da instalação</span></div>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-[rgba(237,78,15,0.12)] bg-navy overflow-hidden">
+            <div
+              class="flex items-center gap-3 px-5 py-3 bg-[rgba(237,78,15,0.05)] border-b border-[rgba(237,78,15,0.1)]"
+            >
+              <span
+                class="w-6 h-6 rounded-full bg-primary text-black text-xs font-black flex items-center justify-center"
+              >4</span>
+              <span class="text-slate-text text-sm font-semibold">Conectar Seu App</span>
+            </div>
+            <div class="code-block p-5">
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Mercury expõe um TNC TCP compatível com VARA:</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Controle ARQ: localhost:8300</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Dados ARQ: localhost:8301</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Broadcast: localhost:8100</span></div>
+              <div><span
+                  class="text-slate-muted"
+                  style="opacity:0.6"
+                ># Configure Winlink, JS8Call, VarAC, vARIM ou seu app para conectar aqui</span></div>
+            </div>
+          </div>
+        </div>
         <!-- Source tab -->
         <div
           id="panel-source"
